@@ -83,7 +83,6 @@ public class GearRatios {
 
     public static void main(String[] args) throws URISyntaxException, IOException {
         String file = readFile(Objects.requireNonNull(ClassLoader.getSystemResource("Day3/input.txt").toURI()));
-        Integer total = Pattern.compile("\\d+").matcher(file).results().map(MatchResult::group).map(Integer::parseInt).reduce(Integer::sum).orElseThrow();
         String[] lines = file.split("\n");
         System.out.println(partOne(lines));
         System.out.println(partTwo(lines));
